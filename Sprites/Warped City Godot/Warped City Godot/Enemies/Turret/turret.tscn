@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://dp4eet13bkkd8"]
+
+[ext_resource type="Texture2D" uid="uid://1d0k5mdn4ksa" path="res://Enemies/Turret/turret-preview.png" id="1_eq3y1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v58w0"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(0, 0, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1emir"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(25, 0, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pktrd"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(50, 0, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytllq"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(75, 0, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p23le"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(100, 0, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spv7v"]
+atlas = ExtResource("1_eq3y1")
+region = Rect2(125, 0, 25, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnlfq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v58w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1emir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pktrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytllq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p23le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p23le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytllq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pktrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1emir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spv7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spv7v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Turret" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lnlfq")
+autoplay = "default"
+frame_progress = 0.0560749

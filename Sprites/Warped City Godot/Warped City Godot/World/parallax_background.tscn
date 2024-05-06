@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://3sksd0fw621u"]
+
+[ext_resource type="Texture2D" uid="uid://c5f88g7m0pnmt" path="res://World/background/skyline-a.png" id="1_3cw0f"]
+[ext_resource type="Texture2D" uid="uid://bs7dxa2fc8o2r" path="res://World/background/buildings-bg.png" id="2_bm6io"]
+[ext_resource type="Texture2D" uid="uid://m5pqg4xm2p5o" path="res://World/background/near-buildings-bg.png" id="3_rk6cw"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayerSky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayerSky"]
+offset_right = 1024.0
+offset_bottom = 240.0
+texture = ExtResource("1_3cw0f")
+stretch_mode = 1
+
+[node name="ParallaxLayerBuildings" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.2)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayerBuildings"]
+offset_top = 116.0
+offset_right = 1008.0
+offset_bottom = 240.0
+texture = ExtResource("2_bm6io")
+stretch_mode = 1
+
+[node name="ParallaxLayerNearBuildings" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.5)
+motion_mirroring = Vector2(986, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayerNearBuildings"]
+offset_top = 31.0
+offset_right = 986.0
+offset_bottom = 240.0
+texture = ExtResource("3_rk6cw")
+stretch_mode = 1

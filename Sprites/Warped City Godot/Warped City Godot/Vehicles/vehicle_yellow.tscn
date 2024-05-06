@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfmsdomhdb77r"]
+
+[ext_resource type="Texture2D" uid="uid://dua04cdgokob4" path="res://Vehicles/v-yellow.png" id="1_33lwe"]
+[ext_resource type="Script" path="res://Vehicles/Vehicle.gd" id="2_qg4du"]
+
+[node name="VehicleYellow" type="Sprite2D"]
+texture = ExtResource("1_33lwe")
+script = ExtResource("2_qg4du")

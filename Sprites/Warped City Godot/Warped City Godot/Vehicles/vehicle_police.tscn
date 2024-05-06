@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2ui8uq6c7eit"]
+
+[ext_resource type="Script" path="res://Vehicles/Vehicle.gd" id="1_i58qm"]
+[ext_resource type="Texture2D" uid="uid://dt0bfld4rhik0" path="res://Vehicles/v-police.png" id="1_uba6j"]
+
+[node name="VehiclePolice" type="Sprite2D"]
+texture = ExtResource("1_uba6j")
+script = ExtResource("1_i58qm")

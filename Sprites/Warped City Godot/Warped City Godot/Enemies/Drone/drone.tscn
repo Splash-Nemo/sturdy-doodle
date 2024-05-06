@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj5bvj5ik8sfy"]
+
+[ext_resource type="Texture2D" uid="uid://pmofgkdhd6u2" path="res://Enemies/Drone/drone_preview.png" id="1_dfg34"]
+[ext_resource type="Script" path="res://Enemies/Drone/drone.gd" id="1_pxc43"]
+
+[sub_resource type="Animation" id="Animation_l2v0t"]
+resource_name = "drone"
+length = 4.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8, 1.9, 2, 2.1, 3.8, 3.9, 4, 4.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"turn_around"
+}, {
+"args": [],
+"method": &"turn_around"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_rmn1b"]
+length = 0.001
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j4qjh"]
+_data = {
+"RESET": SubResource("Animation_rmn1b"),
+"drone": SubResource("Animation_l2v0t")
+}
+
+[node name="Drone" type="Area2D"]
+script = ExtResource("1_pxc43")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dfg34")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "drone"
+libraries = {
+"": SubResource("AnimationLibrary_j4qjh")
+}

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cahswqih6nvmv"]
+
+[ext_resource type="Texture2D" uid="uid://bkxop80ho0uin" path="res://Vehicles/v-red.png" id="1_uyfy5"]
+[ext_resource type="Script" path="res://Vehicles/Vehicle.gd" id="2_0ry8s"]
+
+[node name="VehicleRed" type="Sprite2D"]
+texture = ExtResource("1_uyfy5")
+script = ExtResource("2_0ry8s")
