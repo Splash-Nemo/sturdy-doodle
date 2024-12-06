@@ -1,11 +1,11 @@
 
-## Demo
-
-[screen-recording(1).webm](https://github.com/Splash-Nemo/sturdy-doodle/assets/113250246/04348937-239a-40d1-8475-57213a82352c)
-
 # Sturdy-Doodle
 
 This project serves as a valuable learning opportunity in various areas, including HTML Canvas, Sprite Sheet animations, Object-Oriented Programming, math and physics concepts, Collision Detection, and Gravity control.
+
+## Demo
+
+[screen-recording(1).webm](https://github.com/Splash-Nemo/sturdy-doodle/assets/113250246/04348937-239a-40d1-8475-57213a82352c)
 
 ## Step-by-Step Approach:
 
